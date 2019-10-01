@@ -83,7 +83,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="test_my_site">
 <meta property="og:url" content="https://chrishyc.github.io/chris/2019/09/30/test-my-site/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="克里斯">
 <meta property="og:description" content="无论多么沮丧，我都未放弃过努力">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-09-30T12:37:30.395Z">
@@ -99,7 +99,7 @@
     root: '/chris/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -125,7 +125,7 @@
 
 
 
-  <title>test_my_site | Hexo</title>
+  <title>test_my_site | 克里斯</title>
   
 
 
@@ -136,7 +136,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?2292d0be6e4dd8044742ed0f5f698883";
+      hm.src = "https://hm.baidu.com/hm.js?550df04181c4cfeff1d3ed897c6144f2";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -165,12 +165,12 @@
     <div class="custom-logo-site-title">
       <a href="/chris/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">克里斯</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">克里斯的思维空间</p>
       
   </div>
 
@@ -283,7 +283,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="克里斯">
     </span>
 
     
@@ -312,7 +312,14 @@
 
             
           </span>
-
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2019-09-30T20:37:30+08:00" content="2019-09-30">
+                2019-09-30
+              </time>
+            </span>
+          
           
 
           
@@ -518,18 +525,6 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
 
         
 
@@ -706,6 +701,13 @@
         guest_info:guest,
         pageSize:'10' || 10,
     });
+    //新增以下代码即可，可以移除.info下所有子节点。
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+        infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+    });
+}
   </script>
 
 
